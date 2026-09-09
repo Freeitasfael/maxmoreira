@@ -623,24 +623,39 @@ a:focus-visible, button:focus-visible {
 /* Responsive Design */
 @media (max-width: 768px) {
     .container {
-        padding: 60px 16px 40px; /* Mais espaço no topo para acomodar a foto */
+        padding: 60px 16px 20px;
     }
     
-    .profile-image {
-        margin: -90px auto 16px !important; /* Levanta a foto e garante o respiro até o nome */
-        width: 100px !important;
-        height: 100px !important;
+    .hero {
+        margin-bottom: 70vh !important; /* Força o restante do site para baixo da primeira tela */
+        padding-top: 60px !important;
     }
     
-    .name { font-size: 1.35rem !important; line-height: 1.2 !important; margin-bottom: 8px !important; white-space: nowrap !important; }
-    .title { font-size: 0.95rem !important; margin-bottom: 16px !important; }
-    .highlight { font-size: 1.05rem !important; }
-    h2, .section-title { font-size: 1.6rem !important; line-height: 1.3 !important; }
-    p, .description, .section-desc { font-size: 1rem !important; line-height: 1.5 !important; }
-    .btn { font-size: 0.95rem; padding: 12px 20px; }
+    .profile-img-container {
+        width: 90px !important;
+        height: 90px !important;
+        top: -45px !important;
+    }
+    
+    .name { font-size: 1.15rem !important; line-height: 1.2 !important; margin-bottom: 6px !important; white-space: nowrap !important; }
+    .title { font-size: 0.8rem !important; margin-bottom: 12px !important; }
+    .highlight { font-size: 0.95rem !important; }
+    h2, .section-title { font-size: 1.35rem !important; line-height: 1.3 !important; }
+    p, .description, .section-desc { font-size: 0.88rem !important; line-height: 1.5 !important; }
+    .btn { font-size: 0.85rem; padding: 10px 16px; }
     
     .card, .quem-sou-eu, .maximind-section {
-        padding: 32px 24px !important;
+        padding: 24px 16px !important;
+    }
+    
+    #sobre {
+        flex-direction: column !important;
+        text-align: center !important;
+        gap: 24px !important;
+    }
+    
+    #sobre h2 {
+        text-align: center !important;
     }
     
     .tags-grid {
