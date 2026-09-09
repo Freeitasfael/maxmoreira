@@ -36,8 +36,8 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }, observerOptions);
 
-    // Selecionar todos os elementos com a classe fade-in
-    document.querySelectorAll('.fade-in').forEach(el => {
+    // Selecionar todos os elementos com as classes de animação
+    document.querySelectorAll('.fade-in, .slide-left, .slide-right, .zoom-in').forEach(el => {
         observer.observe(el);
     });
 

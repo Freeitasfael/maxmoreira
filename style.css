@@ -590,16 +590,17 @@ a.contact-item:hover {
 }
 
 /* Animations */
-.fade-in {
-    opacity: 0;
-    transform: translateY(20px);
-    transition: opacity 0.8s ease-out, transform 0.8s ease-out;
-}
+.fade-in { opacity: 0; transform: translateY(20px); transition: opacity 0.8s ease-out, transform 0.8s ease-out; }
+.fade-in.visible { opacity: 1; transform: translateY(0); }
 
-.fade-in.visible {
-    opacity: 1;
-    transform: translateY(0);
-}
+.slide-left { opacity: 0; transform: translateX(-30px); transition: opacity 0.8s ease-out, transform 0.8s ease-out; }
+.slide-left.visible { opacity: 1; transform: translateX(0); }
+
+.slide-right { opacity: 0; transform: translateX(30px); transition: opacity 0.8s ease-out, transform 0.8s ease-out; }
+.slide-right.visible { opacity: 1; transform: translateX(0); }
+
+.zoom-in { opacity: 0; transform: scale(0.95); transition: opacity 0.8s ease-out, transform 0.8s ease-out; }
+.zoom-in.visible { opacity: 1; transform: scale(1); }
 
 .delay-1 { transition-delay: 0.1s; }
 .delay-2 { transition-delay: 0.2s; }
@@ -625,8 +626,36 @@ a:focus-visible, button:focus-visible {
         padding: 40px 16px;
     }
     
+    .name { font-size: 2.2rem !important; }
+    .title { font-size: 1.1rem !important; }
+    .highlight { font-size: 1.1rem !important; }
+    h2, .section-title { font-size: 1.7rem !important; line-height: 1.3 !important; }
+    p, .description, .section-desc { font-size: 1rem !important; line-height: 1.5 !important; }
+    .btn { font-size: 0.95rem; padding: 12px 20px; }
+    
     .card, .quem-sou-eu, .maximind-section {
-        padding: 32px 24px;
+        padding: 32px 24px !important;
+    }
+    
+    .tags-grid {
+        gap: 6px !important;
+    }
+    
+    .tags-grid span {
+        font-size: 0.8rem !important;
+        padding: 8px 14px !important;
+    }
+    
+    .contact-info, .address-crp {
+        flex-direction: row;
+        flex-wrap: wrap;
+        align-items: flex-start;
+        justify-content: space-between;
+        gap: 20px;
+    }
+    
+    .address.contact-item {
+        width: 100%;
     }
     
     .quem-sou-eu .overlay {
