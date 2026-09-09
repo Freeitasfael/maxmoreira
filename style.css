@@ -639,9 +639,11 @@ a:focus-visible, button:focus-visible {
     .profile-img-container {
         position: relative !important; /* Tira do topo absoluto */
         top: 0 !important;
+        left: 0 !important;
+        transform: none !important; /* Remove o translate da versão desktop */
         margin: 0 auto 24px auto !important; /* Espaço exato entre a foto e o nome */
-        width: 100px !important;
-        height: 100px !important;
+        width: 140px !important; /* Aumentado conforme pedido */
+        height: 140px !important; /* Aumentado conforme pedido */
     }
     
     .name { font-size: 1.15rem !important; line-height: 1.2 !important; margin-bottom: 6px !important; white-space: nowrap !important; }
