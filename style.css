@@ -623,23 +623,30 @@ a:focus-visible, button:focus-visible {
 /* Responsive Design */
 @media (max-width: 768px) {
     .container {
-        padding: 60px 16px 20px;
+        padding: 40px 16px 20px;
     }
     
     .hero {
-        margin-bottom: 70vh !important; /* Força o restante do site para baixo da primeira tela */
-        padding-top: 60px !important;
+        min-height: 85vh !important; /* Apenas o hero na primeira tela */
+        display: flex !important;
+        flex-direction: column !important;
+        justify-content: center !important;
+        align-items: center !important;
+        padding-top: 32px !important;
+        margin-bottom: 24px !important; /* Espaçamento normal, sem o buraco branco */
     }
     
     .profile-img-container {
-        width: 90px !important;
-        height: 90px !important;
-        top: -45px !important;
+        position: relative !important; /* Tira do topo absoluto */
+        top: 0 !important;
+        margin: 0 auto 24px auto !important; /* Espaço exato entre a foto e o nome */
+        width: 100px !important;
+        height: 100px !important;
     }
     
     .name { font-size: 1.15rem !important; line-height: 1.2 !important; margin-bottom: 6px !important; white-space: nowrap !important; }
     .title { font-size: 0.8rem !important; margin-bottom: 12px !important; }
-    .highlight { font-size: 0.95rem !important; }
+    .highlight { font-size: 0.95rem !important; margin-top: 16px !important; }
     h2, .section-title { font-size: 1.35rem !important; line-height: 1.3 !important; }
     p, .description, .section-desc { font-size: 0.88rem !important; line-height: 1.5 !important; }
     .btn { font-size: 0.85rem; padding: 10px 16px; }
